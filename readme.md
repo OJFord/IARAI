@@ -1,5 +1,5 @@
 #IARAI:
-##_A Relational Algebra Interpreter_
+##_A Relational Algebra Interpreter_ [![Build Status](https://travis-ci.org/OJFord/IARAI.png)](https://travis-ci.org/OJFord/IARAI)
 
 IARAI is an interpreter for the RA, intended as a learning aid - allowing hopefully straightforward testing of expressions, and continuing an expression with the relation resulting from the previous command.
 
