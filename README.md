@@ -1,17 +1,32 @@
 #IARAI:
-##_A Relational Algebra Interpreter_ [![Build Status](https://travis-ci.org/OJFord/IARAI.png)](https://travis-ci.org/OJFord/IARAI)
+####_A Relational Algebra Interpreter_ [![Build Status](https://travis-ci.org/OJFord/IARAI.png)](https://travis-ci.org/OJFord/IARAI)
 
 IARAI is an interpreter for the RA, intended as a learning aid - allowing hopefully straightforward testing of expressions, and continuing an expression with the relation resulting from the previous command.
 
 The full expression used to generate each output is printed, facilitating an interactive arrival at a solution, without need to remember how we got there.
 
-The acronym is both recursive, and palindromic; so you know it must be good. (Pronounce 'Yarr-Eye', or think "one Toyota Yaris, multiple Toyota Yari".)
+The acronym is both recursive, and palindromic; so you know it must be good.  
+(Pronounce 'Yarr-Eye', or think "one Toyota Yaris, multiple Toyota Yari".)
+
+##Installation
+```
+$ pip install -r requirements.txt
+$ chmod a+x IARAI/iarai.py
+```
+
+##Usage
+```
+$ ./IARAI/iarai.py
+RA>
+```
+
+Feel free to ask for `help` at the prompt, or see below.
 
 ##Operators
 Currently 'alpha af', the following operators are supported:
- - `p` for 'pi' or 'project'
- - `s` for 'sigma' or 'select' (aka 'restrict')
- - `r` for 'rho' or 'rename'
+ - `p` for ['pi' or 'project'](#projection)
+ - `s` for ['sigma' or 'select' (aka 'restrict')](#selection-aka-restriction)
+ - `r` for ['rho' or 'rename'](#renaming)
 
 ###Projection
 `p (relation)` projects all attributes of a given relation.
@@ -23,7 +38,7 @@ Currently 'alpha af', the following operators are supported:
 
 `s_¬ATTR=VAL (relation)` modifies the working relation to include only those tuples with a value different to the given value for the given attribute. `!` and `~` are also supported negators, in recognition of differing keyboard layouts.
 
-**Note** that although the logical and is implicitly supported (by chaining: `s_a=1 s_b=2 (relation)`), the logicaal or operator is dependent on implementation of the Cartesian product.
+**Note** that although the logical AND is implicitly supported (by chaining: `s_a=1 s_b=2 (relation)`), the logical OR operator is dependent on implementation of the Cartesian product.
 
 ###Renaming
 `r_new1/old1,new2/old2 (relation)` modifies the attributes in the working relation corresponding to the given old names, to have the new names also given.
