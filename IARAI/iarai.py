@@ -8,7 +8,7 @@ import	json
 import	shlex
 
 __author__	= 'OJFord'
-__version__	= '1.0dev'
+__version__	= '0.1'
 
 class Interpreter(Cmd):
 	"""IARAI: A Relational Algebra Interpreter."""
