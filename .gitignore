@@ -1,0 +1,7 @@
+*.pyc
+*.json
+!/tests/test_relation.json
+.*
+!/.gitignore
+!/.travis.yml
+

@@ -1,0 +1,10 @@
+{
+	"relation"		: "employees",
+	"attributes"	: [ "name", "id", "job" ],
+	"tuples"		: [
+		["Bob", "1", "Developer"],
+		["John", "34", "HR Manager"],
+		["Mary", "5", "Builder"]
+	]
+}
+
